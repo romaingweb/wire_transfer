@@ -2,6 +2,7 @@ module WireTransfer
   class StructuredCommunication
     def initialize number
       @number = number.to_s
+      raise InvalidNumberError unless @number.match(/\A\d{12}\z/)
     end
 
     # Take a reference number and pad it with a certain amount of zeros
