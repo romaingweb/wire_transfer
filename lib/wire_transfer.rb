@@ -11,7 +11,7 @@ require "wire_transfer/helper"
 require "wire_transfer/invalid_number_error"
 
 module WireTransfer
-  def generate_structured_communication(reference)
+  def self.generate_structured_communication(reference)
     StructuredCommunication.compute(reference)
   end
 end
